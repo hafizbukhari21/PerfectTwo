@@ -9,33 +9,35 @@
 <body>
     <h1>Title</h1>
     <input type="text" class="input">
-    <button type="button">Tampilkan hasil</button>
+    <button type="button" onclick="Count()">Tampilkan hasil</button>
 
     <script>
-        $(document).ready(function () {
+        
             
-            $("button").click(function (e) { 
+            function Count() { 
                 var input = $(".input").val();
                 var sample = [2,7,11,15];
+                var res = 0;
                 for(var i=0; i < sample.length ; i++){
                     for (var j=0 ; j < sample.length ;j++){
-                        
+                        // console.log("i="+i+" | j="+j);
+                      
                         var count =0;
                         if(sample[i]+sample[j] == input){
-                            alert("["+sample[i]+"]"+"["+sample[j]+"]");
-                            break;
-                            count =1;
+                            alert("["+i+"]"+"["+j+"]");
+                            return;    
 
                         }
-                        if(count =1) break;
-                        
-                        
-                        
+              
                     }
                 }
+                if(res==0){
+                    console.log("<no way>");
+                }
+               
 
-            });
-        });
+            }
+        
     </script>
 </body>
 
