@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Title</h1>
+    <input type="text" class="input">
+    <button type="button">Tampilkan hasil</button>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("button").click(function (e) { 
+                var input = $(".input").val();
+                var sample = [2,7,11,15];
+                for(var i=0; i < sample.length ; i++){
+                    for (var j=0 ; j < sample.length ;j++){
+                        
+                        var count =0;
+                        if(sample[i]+sample[j] == input){
+                            alert("["+sample[i]+"]"+"["+sample[j]+"]");
+                            break;
+                            count =1;
+
+                        }
+                        if(count =1) break;
+                        
+                        
+                        
+                    }
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>
